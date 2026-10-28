@@ -1,0 +1,87 @@
+body {
+    background: #f5f1e8;
+    font-family: Arial, sans-serif;
+    text-align: center;
+    margin: 20px;
+}
+
+h1 {
+    color: #0d6e4f;
+}
+
+h2 {
+    color: #333;
+}
+
+.arabic {
+    font-size: 32px;
+    direction: rtl;
+    line-height: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+button {
+    background: #0d6e4f;
+    color: white;
+    border: none;
+    padding: 12px 25px;
+    border-radius: 25px;
+    font-size: 18px;
+    cursor: pointer;
+    margin: 20px;
+}
+
+button:hover {
+    background: #09523b;
+}
+.ayah{
+    padding:15px;
+    margin:10px;
+    border-radius:15px;
+    transition:0.5s;
+}
+
+.active{
+    background:#d4edda;
+    color:#0d6e4f;
+    font-weight:bold;
+    box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+}
+
+
+.dark {
+    background: #121212;
+    color: white;
+}
+
+.dark .arabic {
+    background: #1e1e1e;
+    color: white;
+}
+
+.dark button {
+    background: #333;
+    color: white;
+}
+
+.dark .active {
+    background: #2e7d32;
+    color: white;
+}
+
+.roman{
+    display:block;
+    margin-top:10px;
+    font-size:18px;
+    color:#666;
+    direction:ltr;
+}
+
+.dark .roman{
+    color:#cccccc;
+}
