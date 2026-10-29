@@ -16,7 +16,15 @@
 
     <h1>🕌 Al Quran Kareem</h1>
 
-<h2>Surah Al-Fatihah</h2>
+
+<label for="surahSelect">📖 Select Surah:</label>
+
+<select id="surahSelect" onchange="changeSurah()">
+    <option value="fatihah">Surah Al-Fatihah</option>
+    <option value="baqarah">Surah Al-Baqarah</option>
+</select>
+
+<h2 id="surahTitle">📖 Surah Al-Fatihah</h2>
 
 <button onclick="playAudio()">▶ Play</button>
 
@@ -105,7 +113,9 @@ Un logon ka raasta jin par tune apna inaam kiya, na ke jin par tera ghazab hua a
 </div>
     
    
+<script src="surah-baqarah.js"></script>
+<script src="script.js"></script>
 
-    <script src="script.js"></script>
+
 </body>
 </html>

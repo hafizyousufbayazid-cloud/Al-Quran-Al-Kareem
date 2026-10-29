@@ -1,14 +1,29 @@
 let audio;
 
+let currentSurah = "fatihah";
+
 function playAudio() {
 
-    if (!audio) {
+    
 
-        audio = new Audio(
-            "https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/001.mp3"
-        );
+        if (currentSurah === "fatihah") {
 
-        const ayahs = document.querySelectorAll(".ayah");
+    audio = new Audio(
+    "https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/001.mp3"
+    );
+
+} else if (currentSurah === "baqarah") {
+
+    audio = new Audio(
+    "https://download.quranicaudio.com/quran/mishaari_raashid_al_3afaasee/002.mp3"
+    );
+
+}
+
+audio.play();
+
+const ayahs = document.querySelectorAll(".ayah");
+
 
         audio.ontimeupdate = function () {
 
@@ -76,7 +91,6 @@ function playAudio() {
     }
 
     audio.play();
-}
 
 function pauseAudio() {
     if (audio) {
@@ -91,10 +105,80 @@ function stopAudio() {
         audio.currentTime = 0;
     }
 
+    audio = null;
+}
+
     document.querySelectorAll(".ayah")
         .forEach(a => a.classList.remove("active"));
-}
+
 
 function toggleDarkMode() {
     document.body.classList.toggle("dark");
+}
+
+function changeSurah() {
+
+    const selected = document.getElementById("surahSelect").value;
+
+  if (selected === "baqarah") {
+
+    currentSurah = "baqarah";
+
+    document.getElementById("surahTitle").innerText =
+    "📖 Surah Al-Baqarah";
+
+    loadBaqarah();
+
+    return;
+}
+
+setTimeout(() => {
+    highlightBaqarah();
+}, 3000);
+
+
+}
+
+
+
+
+
+    if (selected === "fatihah") {
+
+        currentSurah = "fatihah";
+
+        location.reload();
+    }
+
+    function highlightBaqarah() {
+
+    const ayahs = document.querySelectorAll(".ayah");
+
+    let current = 0;
+
+    const interval = setInterval(() => {
+
+        ayahs.forEach(a =>
+            a.classList.remove("active")
+        );
+
+        if (current < ayahs.length) {
+
+            ayahs[current].classList.add("active");
+
+            ayahs[current].scrollIntoView({
+                behavior: "smooth",
+                block: "center"
+            });
+
+            current++;
+
+        } else {
+
+            clearInterval(interval);
+
+        }
+
+    }, 20000);
+
 }
