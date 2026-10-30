@@ -103,3 +103,47 @@ select {
     border-radius: 10px;
     margin: 15px;
 }
+
+#notification{
+    color:#0d6e4f;
+    font-weight:bold;
+    margin:10px;
+    font-size:18px;
+}
+
+.arabic {
+    font-size: 32px;
+    direction: rtl;
+    line-height: 2;
+    background: white;
+    padding: 20px;
+    border-radius: 15px;
+    width: 80%;
+    margin: auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    /* ⚡ Yeh 3 lines zaroori hain auto-scroll ke liye */
+    max-height: 500px; 
+    overflow-y: auto;
+    position: relative; 
+}
+
+
+/* Style 1: Premium Quran App Highlighter */
+.active {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%) !important;
+    color: #0d6e4f !important;
+    font-weight: bold !important;
+    border-right: 5px solid #0d6e4f !important; /* Aayat ke shuru mein ek deep green line */
+    box-shadow: 0px 4px 15px rgba(13, 110, 79, 0.15) !important;
+    transform: scale(1.01); /* Halka sa aayat highlight hokar bahar aayegi */
+    transition: all 0.4s ease-in-out !important;
+}
+
+/* Dark Mode ke liye */
+.dark .active {
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%) !important;
+    color: #ffffff !important;
+    border-right: 5px solid #81c784 !important;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5) !important;
+}
+

@@ -22,9 +22,12 @@
 <select id="surahSelect" onchange="changeSurah()">
     <option value="fatihah">Surah Al-Fatihah</option>
     <option value="baqarah">Surah Al-Baqarah</option>
+    <option value="kahf">Surah Al-Kahf</option>
 </select>
 
 <h2 id="surahTitle">📖 Surah Al-Fatihah</h2>
+
+<p id="notification"></p>
 
 <button onclick="playAudio()">▶ Play</button>
 
@@ -33,6 +36,7 @@
 <button onclick="stopAudio()">⏹ Stop</button>
 
 <button onclick="toggleDarkMode()">🌙 Dark Mode</button>
+
 
 <div class="arabic">
 
@@ -114,6 +118,7 @@ Un logon ka raasta jin par tune apna inaam kiya, na ke jin par tera ghazab hua a
     
    
 <script src="surah-baqarah.js"></script>
+<script src="surah-kahf.js"></script>
 <script src="script.js"></script>
 
 
