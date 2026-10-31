@@ -1,12 +1,34 @@
 <!DOCTYPE html>
 <html>
-<head>
+ <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Quran App</title>
     <link rel="stylesheet" href="style.css">
-</head>
+ </head>
 
 <body>
-    
+ <div id="homePage">
+
+    <h2>📚 Popular Surahs</h2>
+
+    <button onclick="quickSurah('fatihah')">
+        📖 Al-Fatihah
+    </button>
+
+    <button onclick="quickSurah('baqarah')">
+        📖 Al-Baqarah
+    </button>
+
+    <button onclick="quickSurah('kahf')">
+        📖 Al-Kahf
+    </button>
+
+    <button onclick="quickSurah('yasin')">
+        📖 Yasin
+    </button>
+
+</div>
+   
 <div class="developer-credit">
     Developer: Allah 🤲
     <br>
@@ -23,6 +45,13 @@
     <option value="fatihah">Surah Al-Fatihah</option>
     <option value="baqarah">Surah Al-Baqarah</option>
     <option value="kahf">Surah Al-Kahf</option>
+    <option value="yasin">Surah Yasin</option>
+    <option value="mulk">Surah Mulk</option>
+    <option value="waqia">Surah Waqia</option>
+    <option value="ikhlas">Surah Ikhlas</option>
+    <option value="falaq">Surah Falaq</option>
+    <option value="naas">Surah Naas</option>
+
 </select>
 
 <h2 id="surahTitle">📖 Surah Al-Fatihah</h2>
@@ -115,10 +144,19 @@ Humein seedha raasta dikha.
 Un logon ka raasta jin par tune apna inaam kiya, na ke jin par tera ghazab hua aur na gumrahon ka.
 </span>
 </div>
-    
-   
+
+</div>  
+
+
 <script src="surah-baqarah.js"></script>
 <script src="surah-kahf.js"></script>
+<script src="surah-yasin.js"></script>
+<script src="surah-mulk.js"></script>
+<script src="surah-waqia.js"></script>
+<script src="surah-ikhlas.js"></script>
+<script src="surah-falaq.js"></script>
+<script src="surah-naas.js"></script>
+
 <script src="script.js"></script>
 
 

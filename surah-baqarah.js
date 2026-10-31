@@ -1,10 +1,6 @@
 function loadBaqarah() {
 
-    let html = `
-    <div class="ayah">
-        (1) الم
-    </div>
-    `;
+    let html = "";
 
     fetch("https://api.alquran.cloud/v1/surah/2")
         .then(response => response.json())
@@ -12,10 +8,8 @@ function loadBaqarah() {
 
             data.data.ayahs.forEach(ayah => {
 
-                if (ayah.numberInSurah === 1) return;
-
                 html += `
-                <div class="ayah">
+                <div class="ayah" id="a${ayah.numberInSurah}">
                     (${ayah.numberInSurah}) ${ayah.text}
                 </div>
                 `;
@@ -23,5 +17,6 @@ function loadBaqarah() {
 
             document.querySelector(".arabic").innerHTML = html;
 
-        });
+        })
+        .catch(error => console.error("Error loading Baqarah:", error));
 }

@@ -1,22 +1,22 @@
 function loadKahf() {
 
+    let html = "";
+
     fetch("https://api.alquran.cloud/v1/surah/18")
         .then(response => response.json())
         .then(data => {
 
-            let html = "";
-
             data.data.ayahs.forEach(ayah => {
 
                 html += `
-                <div class="ayah">
-                (${ayah.numberInSurah}) ${ayah.text}
+                <div class="ayah" id="a${ayah.numberInSurah}">
+                    (${ayah.numberInSurah}) ${ayah.text}
                 </div>
                 `;
             });
 
             document.querySelector(".arabic").innerHTML = html;
 
-        });
-
+        })
+        .catch(error => console.error("Error loading Kahf:", error));
 }

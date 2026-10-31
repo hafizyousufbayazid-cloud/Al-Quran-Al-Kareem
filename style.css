@@ -3,6 +3,7 @@ body {
     font-family: Arial, sans-serif;
     text-align: center;
     margin: 20px;
+    transition: background 0.3s ease;
 }
 
 h1 {
@@ -13,6 +14,7 @@ h2 {
     color: #333;
 }
 
+/* ⚡ Perfectly Merged Container Box with Auto-Scroll Support */
 .arabic {
     font-size: 32px;
     direction: rtl;
@@ -23,6 +25,9 @@ h2 {
     width: 80%;
     margin: auto;
     box-shadow: 0 0 10px rgba(0,0,0,0.1);
+    max-height: 500px; 
+    overflow-y: auto;
+    position: relative; 
 }
 
 button {
@@ -39,20 +44,24 @@ button {
 button:hover {
     background: #09523b;
 }
-.ayah{
-    padding:15px;
-    margin:10px;
-    border-radius:15px;
-    transition:0.5s;
+
+.ayah {
+    padding: 15px;
+    margin: 10px;
+    border-radius: 15px;
+    transition: 0.5s;
 }
 
-.active{
-    background:#d4edda;
-    color:#0d6e4f;
-    font-weight:bold;
-    box-shadow:0px 0px 10px rgba(0,0,0,0.2);
+/* ⚡ Premium Quran App Borderless Scroll Tracker Trigger styling */
+.active {
+    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%) !important;
+    color: #0d6e4f !important;
+    font-weight: bold !important;
+    border-right: 5px solid #0d6e4f !important; 
+    box-shadow: 0px 4px 15px rgba(13, 110, 79, 0.15) !important;
+    transform: scale(1.01); 
+    transition: all 0.4s ease-in-out !important;
 }
-
 
 .dark {
     background: #121212;
@@ -69,32 +78,35 @@ button:hover {
     color: white;
 }
 
+/* ⚡ Dark Mode Active Scroll View Styling */
 .dark .active {
-    background: #2e7d32;
+    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%) !important;
+    color: #ffffff !important;
+    border-right: 5px solid #81c784 !important;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5) !important;
+}
+
+.developer-credit {
+    text-align: center;
+    font-size: 16px;
+    background: #0d6e4f;
     color: white;
+    padding: 10px;
+    border-radius: 10px;
+    margin-bottom: 20px;
+    font-weight: bold;
 }
 
-.developer-credit{
-    text-align:center;
-    font-size:16px;
-    background:#0d6e4f;
-    color:white;
-    padding:10px;
-    border-radius:10px;
-    margin-bottom:20px;
-    font-weight:bold;
+.roman {
+    display: block;
+    margin-top: 10px;
+    font-size: 18px;
+    color: #666;
+    direction: ltr;
 }
 
-.roman{
-    display:block;
-    margin-top:10px;
-    font-size:18px;
-    color:#666;
-    direction:ltr;
-}
-
-.dark .roman{
-    color:#cccccc;
+.dark .roman {
+    color: #cccccc;
 }
 
 select {
@@ -104,46 +116,52 @@ select {
     margin: 15px;
 }
 
-#notification{
-    color:#0d6e4f;
-    font-weight:bold;
-    margin:10px;
-    font-size:18px;
+#notification {
+    color: #0d6e4f;
+    font-weight: bold;
+    margin: 10px;
+    font-size: 18px;
 }
 
-.arabic {
-    font-size: 32px;
-    direction: rtl;
-    line-height: 2;
-    background: white;
-    padding: 20px;
-    border-radius: 15px;
-    width: 80%;
-    margin: auto;
-    box-shadow: 0 0 10px rgba(0,0,0,0.1);
-    /* ⚡ Yeh 3 lines zaroori hain auto-scroll ke liye */
-    max-height: 500px; 
-    overflow-y: auto;
-    position: relative; 
-}
+@media (max-width: 768px) {
 
+    body {
+        padding: 10px;
+    }
 
-/* Style 1: Premium Quran App Highlighter */
-.active {
-    background: linear-gradient(135deg, #e8f5e9 0%, #c8e6c9 100%) !important;
-    color: #0d6e4f !important;
-    font-weight: bold !important;
-    border-right: 5px solid #0d6e4f !important; /* Aayat ke shuru mein ek deep green line */
-    box-shadow: 0px 4px 15px rgba(13, 110, 79, 0.15) !important;
-    transform: scale(1.01); /* Halka sa aayat highlight hokar bahar aayegi */
-    transition: all 0.4s ease-in-out !important;
-}
+    h1 {
+        font-size: 28px;
+    }
 
-/* Dark Mode ke liye */
-.dark .active {
-    background: linear-gradient(135deg, #1b5e20 0%, #2e7d32 100%) !important;
-    color: #ffffff !important;
-    border-right: 5px solid #81c784 !important;
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.5) !important;
+    h2 {
+        font-size: 22px;
+    }
+
+    .ayah {
+        font-size: 24px;
+        padding: 15px;
+        line-height: 2;
+    }
+
+    .roman {
+        font-size: 16px;
+    }
+
+    button {
+        width: 100%;
+        padding: 12px;
+        margin: 5px 0;
+        font-size: 16px;
+    }
+
+    select {
+        width: 100%;
+        padding: 10px;
+        font-size: 16px;
+    }
+
+    .developer-credit {
+        font-size: 14px;
+    }
 }
 
